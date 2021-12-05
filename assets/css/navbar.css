@@ -1,0 +1,127 @@
+@import url(./normalize.css);
+@import url(./style.css);
+.navbar {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  background-color: var(--global-body-bg-color);
+  padding: 20px 0;
+  z-index: 200;
+  box-shadow: var(--global-box-shadow);
+  transition: var(--global-transition);
+}
+
+.navbar .container,
+.navbar .container .logo,
+.navbar .container .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .container .logo a {
+  font-size: 28px;
+  margin-right: 20px;
+  color: var(--global-color-primary);
+}
+.navbar .container .links li {
+  margin: 0px 20px;
+}
+.navbar .container .links li a {
+  position: relative;
+  padding-bottom: 10px;
+  color: var(--global-color-text);
+  border: 2px solid var(--global-body-bg-color);
+  transition: var(--global-transition);
+}
+.navbar .container .links a:hover {
+  color: var(--global-color-secondary);
+}
+.navbar .container .links li a.check {
+  color: var(--global-color-secondary) !important;
+  border-bottom: 3px solid var(--global-color-secondary);
+}
+.navbar .container .links .close,
+.navbar .container .menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar .container .links {
+    display: none;
+  }
+  .navbar .container .menu-icon {
+    display: block;
+  }
+}
+.navbar .container .active {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--global-body-bg-color);
+  top: 0;
+  left: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.navbar .container .active li a {
+  position: relative;
+  text-align: center;
+  color: var(--global-color-primary);
+  display: block;
+  width: fit-content;
+  margin: 16px 0;
+  padding: 12px 20px;
+  font-weight: 600;
+}
+.navbar .container .active li a::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--global-color-secondary);
+  z-index: -1;
+  transition: var(--global-transition);
+}
+.navbar .container .active li:hover a {
+  color: var(--global-body-bg-color) !important;
+  transition-delay: 0.3s;
+}
+.navbar .container .active li:hover a::before {
+  width: 100%;
+}
+.navbar .container .active .close {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  color: var(--global-color-primary);
+  background-color: var(--global-color-secondary);
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: var(--global-transition);
+  border: 4px solid var(--global-color-secondary);
+}
+.navbar .container .active .close:hover {
+  background-color: #fff;
+}
+.sticky {
+  position: fixed;
+  padding: 14px 0;
+  background-color: var(--global-body-bg-color);
+  box-shadow: var(--global-box-shadow);
+}
+.sticky .links li a {
+  color: var(--global-color-primary) !important;
+}
+.sticky .links li a:hover {
+  color: var(--global-color-secondary) !important;
+}
