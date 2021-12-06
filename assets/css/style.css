@@ -416,16 +416,17 @@ section .container .title {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  margin: 0 0 30px;
 }
 .quran .popup-model .ayahFontSize button {
   background-color: var(--global-color-secondary);
   color: var(--global-body-bg-color);
   border: none;
-  padding: 10px 12px;
+  padding: 10px;
   cursor: pointer;
-  font-size: 18px;
   margin: 0px 10px;
+}
+.quran .popup-model .ayahFontSize button i {
+  font-size: 16px;
 }
 /* End Quran */
 
