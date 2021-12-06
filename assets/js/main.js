@@ -166,6 +166,7 @@ function getSurah() {
 
                 let plus = document.querySelector(".plus"),
                   minus = document.querySelector(".minus"),
+                  reset = document.querySelector(".reset"),
                   value = 16;
 
                 plus.addEventListener("click", () => {
@@ -186,6 +187,12 @@ function getSurah() {
                       oneAyat.style.fontSize = `${value}px`;
                     });
                   }
+                });
+                reset.addEventListener("click", () => {
+                  value = 16;
+                  ayat.querySelectorAll("p").forEach((oneAyat) => {
+                    oneAyat.style.fontSize = `${value}px`;
+                  });
                 });
               });
             });
