@@ -345,7 +345,8 @@ section .container .title {
   z-index: 200;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
   background-color: var(--global-body-bg-color);
   overflow-y: scroll;
   transform: translateX(100%);
@@ -408,6 +409,22 @@ section .container .title {
   text-align: center;
   margin: 0 5px;
   font-size: 13px;
+}
+.quran .popup-model .ayahFontSize {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.quran .popup-model .ayahFontSize button {
+  background-color: var(--global-color-secondary);
+  color: var(--global-body-bg-color);
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 0px 10px;
 }
 /* End Quran */
 

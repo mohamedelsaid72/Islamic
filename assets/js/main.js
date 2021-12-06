@@ -163,6 +163,30 @@ function getSurah() {
               ayas.forEach((aya) => {
                 popupModel.classList.add("active");
                 ayat.innerHTML += `<p>${aya.text}  <span>${aya.numberInSurah}</span></p>`;
+
+                let plus = document.querySelector(".plus"),
+                  minus = document.querySelector(".minus"),
+                  value = 16;
+
+                plus.addEventListener("click", () => {
+                  value += 2;
+                  ayat.querySelectorAll("p").forEach((oneAyat) => {
+                    oneAyat.style.fontSize = `${value}px`;
+                  });
+                });
+
+                minus.addEventListener("click", () => {
+                  if (value === 16) {
+                    ayat.querySelectorAll("p").forEach((oneAyat) => {
+                      oneAyat.style.fontSize = "16px";
+                    });
+                  } else if (value > 16) {
+                    value -= 2;
+                    ayat.querySelectorAll("p").forEach((oneAyat) => {
+                      oneAyat.style.fontSize = `${value}px`;
+                    });
+                  }
+                });
               });
             });
         });
@@ -171,8 +195,8 @@ function getSurah() {
       closeIcon.addEventListener("click", () => {
         popupModel.classList.remove("active");
       });
-      /* Popup Model */
     });
+  /* Popup Model */
 }
 /* Quran */
 
