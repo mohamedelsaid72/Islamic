@@ -5,7 +5,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   direction: rtl;
-  font-family: "Tajawal", sans-serif;
 }
 :root {
   --global-body-bg-color: #fff;
